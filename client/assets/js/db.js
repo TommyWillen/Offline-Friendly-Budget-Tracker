@@ -23,7 +23,7 @@ request.onerror = function (event) {
   console.log("Woops! " + event.target.errorCode);
 };
 
-export function saveRecord(record) {
+function saveRecord(record) {
   // open a transaction on the pending object store in the budget db with readwrite access
   const transaction = db.transaction(["pending"], "readwrite");
 
